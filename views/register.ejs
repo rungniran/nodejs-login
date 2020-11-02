@@ -11,33 +11,41 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-sm"> 
-           
+        <div class="col-sm">
+            
             <div class="card text-white bg-dark mb-3" style="margin-top: 70px">
-                <h5 class="card-header">Login</h5>
+                <h5 class="card-header">Register</h5>
                 <div class="card-body">
-                    <form action="login" method="post">
+                    <form action="/register" method="post">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">username// username</label>
+                            <label for="exampleInputEmail1">username</label>
                             <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password // 12345678</label>
+                            <label for="exampleInputPassword1">Password</label>
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                         </div>
+                         <div class="form-group">
+                            <label for="exampleInputPassword1">confirm Password</label>
+                            <input type="password" name="confirm_password" class="form-control" id="exampleInputPassword1">
+                        </div>
                         <button type="submit" class="btn btn-primary">Submit</button> &nbsp; &nbsp;
-                        <a href="register" style="float: right;  color: #fff; padding-left: 7px; margin-right: 12px; margin-top: 12px;">    
-                            Register
-                        </a>
+                        <a href="/" style="float: right;  color: #fff; padding-left: 7px; margin-right: 12px; margin-top: 12px;">Login</a> 
+                        
                     </form>
                 </div>
             </div>
-            <% if (message.length > 0) { %>
-                <div class="alert alert-danger" role="alert"><%= message %></div>
-            <% } %>
         </div>
      </div>
 </div>
+<% if (message.length > 0) { %>
+    <%= message %>
+<% } %>
 </body>
 </html>
