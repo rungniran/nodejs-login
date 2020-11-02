@@ -25,7 +25,7 @@ app.use(session({secret: 'qqqqqqqqssshhhhh',saveUninitialized: true,resave: true
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/auth', authRouter);
+app.use('/', authRouter);
 
 
 
